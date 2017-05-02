@@ -1,7 +1,7 @@
   var app= angular.module('child',[])
   app.controller('parent', function($scope){
       
-    var phrases=[ 
+    var sayings=[ 
     "Ice cream",
     "iPhone",
     "butts",
@@ -11,10 +11,9 @@
     "Gimmie",
     "Poop",
     "doggy",
-    "I'm hungry",
     "Candy",
-    "Fart",
-    "I hate you"]
+    "Fart"
+  ]
     
     var classes=[
         'bold',
@@ -23,21 +22,31 @@
         'italic',
         'border'
     ]
+    var phrases=["Why do you smell","Can I go outide","Where's mom","I'm hungry","I hate you","Can I have some", "What are you doing?"     
+    ]
       
   $scope.words=[];
       $scope.addWord= function(){
-        var i=Math.floor(Math.random()*13);
-        $scope.words.push({text: phrases[i] })
+        var i=Math.floor(Math.random()*sayings.length);
+        $scope.words.push({text: sayings[i] })
           console.log($scope.words)
       };
       $scope.fancyWords= function(){
-          var i=Math.floor(Math.random()*13);
+          var i=Math.floor(Math.random()*sayings.length);
+          var j=Math.floor(Math.random()*classes.length)
+        $scope.words.push({text: sayings[i], cls: classes[j] })
+          console.log($scope.words)
+      };
+      $scope.kidPhrases=function(){
+          var i=Math.floor(Math.random()*phrases.length);
+        $scope.words.push({text: phrases[i] })
+          console.log($scope.words)
+      }
+    $scope.kidFancyPhrases= function(){
+             var i=Math.floor(Math.random()*phrases.length);
           var j=Math.floor(Math.random()*classes.length)
         $scope.words.push({text: phrases[i], cls: classes[j] })
-          console.log($scope.words)
-          console.log('fancywords');
-      };
-  
+    }
   
   
   
