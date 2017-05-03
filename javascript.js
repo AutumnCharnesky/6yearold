@@ -1,7 +1,7 @@
   var app= angular.module('child',[])
   app.controller('parent', function($scope){
-      
-    var sayings=[ 
+
+    var sayings=[
     "Ice cream",
     "iPhone",
     "butts",
@@ -14,17 +14,18 @@
     "Candy",
     "Fart"
   ]
-    
+
     var classes=[
         'bold',
-        'unnerline',
+        'underline',
         'color',
         'italic',
         'border'
     ]
-    var phrases=["Why do you smell","Can I go outide","Where's mom","I'm hungry","I hate you","Can I have some", "What are you doing?"     
+    var phrases=["Why do you smell","Can I go outide","Where's mom","I'm hungry","I hate you","Can I have some", "What are you doing?"
     ]
-      
+
+
   $scope.words=[];
       $scope.addWord= function(){
         var i=Math.floor(Math.random()*sayings.length);
@@ -47,17 +48,17 @@
           var j=Math.floor(Math.random()*classes.length)
         $scope.words.push({text: phrases[i], cls: classes[j] })
     }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  })   
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  })

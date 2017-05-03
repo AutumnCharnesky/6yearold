@@ -6,25 +6,33 @@
     <link rel=stylesheet type="text/css" href="style.css">
 </head>
     <body ng-app="child" ng-controller="parent">
+
+      <!-- <marquee id="marquee1" direction="up"><img src="images/chubbyBubbles.jpg" alt="Chubby Bubbles" height="100px" width="100px"></marquee>
+      <marquee id="marquee2" direction="up"><img src="images/chubbyBubbles.jpg" alt="Chubby Bubbles" height="100px" width="100px"></marquee> -->
+
+
+      <div id='kid'>
+
+        <center><img src="images/minekid.jpg" width="1000px" height="500px"></center>
+
+      </div>
+<center>
         <div>
+
             <button type="button" ng-click="addWord()">Words</button>
             <button type="button" ng-click="fancyWords()">Fancy words</button>
             <button type="button" ng-click="kidPhrases()">Phrases</button>
             <button type="button" ng-click="kidFancyPhrases()">Fancy Phrases</button>
 
         </div>
+
+
         <p>
-            <span ng-class="word.cls" ng-repeat="word in words">{{word.text}} 
-            
+            <span ng-class="word.cls" ng-repeat="word in words">{{word.text}}
             </span>
-            
+
         </p>
-        
-        
-        
-        
-        
-        
+</center>
         <script src="lib/angular.min.js"></script>
         <script src="javascript.js"></script>
     </body>

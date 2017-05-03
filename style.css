@@ -1,15 +1,30 @@
+body {
+  background-color: red;
+}
+
 .bold{
-    color:darkturquoise
-}   
-.innerline{
-    color:red
+    font-weight: bold;
+}
+.underline{
+    border-bottom: bold;
 }
 .italic{
-    color:purple
+    font-style: italic;
 }
 .border{
-    color:green
+    border: double
 }
 .color{
-    color:orange
+    color: green;
 }
+/*#marquee1 {
+    position: absolute;
+    top: 0;
+    height: auto;
+}
+#marquee2 {
+    position: absolute;
+    top: 0;
+    height: auto;
+    float: right;
+}*/
